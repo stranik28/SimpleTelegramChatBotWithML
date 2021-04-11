@@ -8,7 +8,7 @@ import logging
 from telegram import Update, ForceReply
 from telegram.ext import Updater, CommandHandler, MessageHandler, Filters, CallbackContext
 
-with open('/home/stranik/PycharmProjects/My_First_ML_BOT_TG/venv/BIG_BOT_CONFIG.json', 'r') as f:
+with open('/home/stranik/PycharmProjects/My_First_ML_BOT_TG/data_for_learning/BIG_BOT_CONFIG.json', 'r') as f:
     BOT_CONFIG = json.load(f)
 
 X = []
@@ -88,7 +88,7 @@ def echo(update: Update, _: CallbackContext) -> None:
 def main() -> None:
     """Start the bot."""
     # Create the Updater and pass it your bot's token.
-    updater = Updater("TOKEN")
+    updater = Updater("Token")
 
     # Get the dispatcher to register handlers
     dispatcher = updater.dispatcher
